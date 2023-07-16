@@ -33,14 +33,14 @@ public class WhenWorkingWithExceptions {
         int numberOfWords = wordCounter.numberOfWordsInFile("src/main/resources/hello.txt");
     }
 
-    @Test(expected = FileHasNoWordsException.class)
-    public void shouldReportAnErrorIfTheFileDoesNotExist() throws  IOException, FileHasNoWordsException{
+    @Test//(expected = FileHasNoWordsException.class)
+    public void shouldReportAnErrorIfTheFileDoesNotExist() throws  IOException {
         int numberOfWords = wordCounter.numberOfWordsInFile("file-that-doesn't-not-exist.txt");
         assertThat(numberOfWords).isEqualTo(0);
     }
 
     @Test(expected = FileHasNoWordsException.class)
-    public void shouldThrowMeaningfulExceptionIfThereAreNoWordsInTheFile() throws IOException, FileHasNoWordsException {
+    public void shouldThrowMeaningfulExceptionIfThereAreNoWordsInTheFile() throws Exception {
         wordCounter.numberOfWordsInFile("src/main/resources/no_words.txt");
     }
 

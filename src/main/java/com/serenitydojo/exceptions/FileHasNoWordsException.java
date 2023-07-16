@@ -1,6 +1,6 @@
 package com.serenitydojo.exceptions;
 
-public class FileHasNoWordsException extends Exception {
+public class FileHasNoWordsException extends RuntimeException {
 
     public FileHasNoWordsException(String message) {
         super(message);

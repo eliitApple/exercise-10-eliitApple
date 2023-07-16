@@ -15,7 +15,7 @@ public class WordCounter {
         return numberOfWords;
     }
 
-    public int numberOfWordsInFile(String filename) throws IOException, FileHasNoWordsException {
+    public int numberOfWordsInFile(String filename) throws IOException {
         try {
             String fileContents = Files.readString(Paths.get(filename));
             int wordCount = numberOfWordsIn(fileContents);
